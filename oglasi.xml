@@ -1,7 +1,11 @@
 <Oglasi>
     <Oglas>
         <Kategorija>Automobil</Kategorija>
-        <Datum>09.05.2022</Datum>
+        <Datum>
+            <Dan>6</Dan>
+            <Mesec>8</Mesec>
+            <Godina>2022</Godina>
+        </Datum>
         <Cena valuta="eur">20</Cena>
         <Tekst></Tekst>
         <Tagovi>
@@ -15,7 +19,11 @@
     </Oglas>
     <Oglas>
         <Kategorija>Stan</Kategorija>
-        <Datum>10.05.2021</Datum>
+        <Datum>
+            <Dan>6</Dan>
+            <Mesec>8</Mesec>
+            <Godina>2022</Godina>
+        </Datum>
         <Cena valuta="eur">50000</Cena>
         <Tekst>Stan u beogradu</Tekst>
         <Tagovi>
