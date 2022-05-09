@@ -1,4 +1,5 @@
-<Oglasi>
+<?xml version="1.0"?>
+<Oglasi xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com oglasiV.xsd">
     <Oglas>
         <Kategorija>Automobil</Kategorija>
         <Datum>
@@ -6,8 +7,8 @@
             <Mesec>8</Mesec>
             <Godina>2022</Godina>
         </Datum>
-        <Cena valuta="eur">20</Cena>
-        <Tekst></Tekst>
+        <Cena valuta="eur">2000</Cena>
+        <Tekst>Tekst oglasa</Tekst>
         <Tagovi>
             <Tag>1992</Tag>
             <Tag>Benzin</Tag>
