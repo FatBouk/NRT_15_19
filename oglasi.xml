@@ -20,9 +20,9 @@
     <Oglas>
         <Kategorija>Stan</Kategorija>
         <Datum>
-            <Dan>6</Dan>
-            <Mesec>8</Mesec>
-            <Godina>2022</Godina>
+            <Dan>2</Dan>
+            <Mesec>5</Mesec>
+            <Godina>2021</Godina>
         </Datum>
         <Cena valuta="eur">50000</Cena>
         <Tekst>Stan u beogradu</Tekst>
