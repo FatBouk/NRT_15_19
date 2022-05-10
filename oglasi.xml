@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Oglasi xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com oglasiV.xsd">
+<Oglasi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="oglasi.xsd">
     <Oglas>
         <Kategorija>Automobil</Kategorija>
         <Datum>
@@ -33,6 +33,7 @@
         </Tagovi>
         <kontakt>
             <email tip="privatni">petar@gmail.com</email>
+            <email tip="sluzbeni">petar@gs.viser.edu.rs</email>
         </kontakt>
     </Oglas>
 </Oglasi>
