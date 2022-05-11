@@ -54,6 +54,7 @@ exports.getOglasByKategorija=(kategorija)=>{
     return this.sviOglasi().filter(oglas=>oglas.kategorija==kategorija)
 }
 
+
 exports.izmeniOglas=(id,body)=>{
     let oglasi=this.sviOglasi()
     //let oglas = oglasi.find(x=>x.id==id);
@@ -63,8 +64,8 @@ exports.izmeniOglas=(id,body)=>{
     snimiOglase(oglasi)
 }
 
-exports.getOglasByCena=(kategorija)=>{
-    return this.sviOglasi().filter(oglas=>oglas.cena>cena)
+exports.getOglasByCena=(cena)=>{
+    return this.sviOglasi().filter(oglas=>parseInt(oglas.cena)>parseInt(cena))
 }
 
 exports.deleteOglas = (id) => {
