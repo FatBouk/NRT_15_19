@@ -35,12 +35,10 @@ app.post('/izmeniOglas/:id',(request,response)=>{
 })
 
 app.get('/filterKat/',(request,response)=>{
-    console.log(oglasiServis.getOglasByKategorija(request.query["kategorija"]))
     response.send(oglasiServis.getOglasByKategorija(request.query["kategorija"]))
 })
 
-app.get('/filterCen/',(request,response)=>{
-    console.log(oglasiServis.getOglasByCena(request.query["cena"]))
+app.get('/filterCena/',(request,response)=>{
     response.send(oglasiServis.getOglasByCena(request.query["cena"]))
 })
 

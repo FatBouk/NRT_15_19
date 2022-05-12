@@ -147,6 +147,58 @@ app.post("/izmeniOglas",(req,res)=>{
   res.redirect("/sviOglasi");
 })
 
+app.post("/filtrirajKategorija",(req,res)=>{
+  axios.get(`http://localhost:3000/filterKat?kategorija=${req.body.kategorija}`)
+  .then((response) => {
+    let prikaz = "";
+    let td=`<td>Kategorija</td>
+    <td>Tekst</td>
+    <td>Cena</td>`
+    response.data.forEach((element) => {
+      prikaz += `
+              <tr>
+                  <td>${element.kategorija}</td>
+                  <td>${element.tekst}</td>
+                  <td>${element.cena}</td>
+                  <td><a href="/detaljnije/${element.id}">Detaljnije</a></td>
+                  <td><a href="/izmeniOglas/${element.id}">Izmeni</a></td>
+                  <td><a href="/delete/${element.id}">Obrisi</a></td>
+              </tr>
+          `;
+    });
+    res.send(procitajPogledZaNaziv("sviOglasi").replace("#{data}", prikaz).replace("##td",td));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
+app.post("/filtrirajCena",(req,res)=>{
+  axios.get(`http://localhost:3000/filterCena?cena=${req.body.cena}`)
+  .then((response) => {
+    let prikaz = "";
+    let td=`<td>Kategorija</td>
+    <td>Tekst</td>
+    <td>Cena</td>`
+    response.data.forEach((element) => {
+      prikaz += `
+              <tr>
+                  <td>${element.kategorija}</td>
+                  <td>${element.tekst}</td>
+                  <td>${element.cena}</td>
+                  <td><a href="/detaljnije/${element.id}">Detaljnije</a></td>
+                  <td><a href="/izmeniOglas/${element.id}">Izmeni</a></td>
+                  <td><a href="/delete/${element.id}">Obrisi</a></td>
+              </tr>
+          `;
+    });
+    res.send(procitajPogledZaNaziv("sviOglasi").replace("#{data}", prikaz).replace("##td",td));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
 app.listen(port, () => {
   console.log(`klijent na portu ${port}`);
 });
