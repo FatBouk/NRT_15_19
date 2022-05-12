@@ -60,7 +60,6 @@ exports.izmeniOglas=(id,body)=>{
     //let oglas = oglasi.find(x=>x.id==id);
     let index=oglasi.findIndex((x=>x.id==id))
     oglasi[index]=body
-    oglasi[index].id=parseInt(id) 
     snimiOglase(oglasi)
 }
 

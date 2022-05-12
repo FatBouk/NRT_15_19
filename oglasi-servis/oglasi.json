@@ -1,1 +1,52 @@
-[{"kategorija":"automobilIZMENJEN","datum":"21.06.2000","cena":"52222","tekst":"tekstualni content","tagovi":"tagovi","email":"mejl","id":1},{"kategorija":"automobilIZMENJEN","datum":"21.06.2000","cena":"22222","tekst":"tekstualni content","tagovi":"tagovi","email":"mejl","id":2}]
+[
+    {
+        "kategorija": "Automobil",
+        "datum": "2022-05-20",
+        "cena": "312",
+        "tekst": "121",
+        "tagovi": [
+            "213"
+        ],
+        "email": "bgdn2000@gmail.com",
+        "id": 1
+    },
+    {
+        "id": 2,
+        "kategorija": "PROMENJEN",
+        "datum": "2022-05-26",
+        "cena": "111",
+        "tekst": "1",
+        "tagovi": [
+            "1"
+        ],
+        "email": "2bgdn2000@gmail.comPROMENJEN"
+    },
+    {
+        "kategorija": "3",
+        "datum": "",
+        "cena": "3",
+        "tekst": "3",
+        "tagovi": [
+            "3"
+        ],
+        "email": "bgdn2000@gmail.com",
+        "id": 3
+    },
+    {
+        "id": 4,
+        "kategorija": "6aaaaaaaaaa",
+        "datum": "2022-05-20",
+        "cena": "2",
+        "tekst": "6",
+        "tagovi": [
+            "1",
+            "2",
+            "6",
+            "6",
+            "5",
+            "4",
+            "tagDodat"
+        ],
+        "email": "bgdn2000@gmail.com"
+    }
+]

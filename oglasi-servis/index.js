@@ -10,9 +10,12 @@ app.get('/sviOglasi',(request, response)=>{
     response.send(oglasiServis.sviOglasi())
 });
 
+app.get('/getOglasByID/:id',(request, response)=>{
+    response.send(oglasiServis.getOglas(request.params["id"]))
+});
+
 app.post('/addOglas',(request,response)=>{
     oglasiServis.addOglas(request.body)
-    //oglasiServis.addOglas(request.body.kategorija,request.body.datum,request.body.cena,request.body.tekst,request.body.tagovi,request.body.email)
     response.end("OK");
 })
 
@@ -25,8 +28,8 @@ app.get('/izmeniOglas/:id',(request,response)=>{
     response.send(oglasiServis.getOglas(request.params["id"]));
 })
 
-app.put('/izmeniOglas/:id',(request,response)=>{
-    console.log(request.body.kategorija)
+app.post('/izmeniOglas/:id',(request,response)=>{
+    console.log(request.body)
     oglasiServis.izmeniOglas(request.params["id"],request.body)
     response.end("OK");
 })
