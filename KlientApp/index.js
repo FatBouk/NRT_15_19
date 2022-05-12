@@ -134,10 +134,10 @@ app.get("/izmeniOglas/:id", (req, res) => {
 app.post("/izmeniOglas",(req,res)=>{
   console.log(req.body)
   axios.post(`http://localhost:3000/izmeniOglas/${req.body.id}`,{
-      id:req.body.id,
+      id:parseInt(req.body.id),
       kategorija:req.body.kategorija,
       datum:req.body.datum,
-      cena:req.body.cena,
+      cena:parseInt(req.body.cena),
       tekst:req.body.tekst,
       tagovi:req.body.tagovi.split(','),
       email:req.body.email

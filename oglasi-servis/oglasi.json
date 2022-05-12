@@ -1,32 +1,21 @@
 [
     {
-        "kategorija": "Automobil",
-        "datum": "2022-05-20",
-        "cena": "312",
-        "tekst": "121",
-        "tagovi": [
-            "213"
-        ],
-        "email": "bgdn2000@gmail.com",
-        "id": 1
-    },
-    {
-        "id": 2,
-        "kategorija": "PROMENJEN",
-        "datum": "2022-05-26",
-        "cena": "111",
-        "tekst": "1",
+        "id": 1,
+        "kategorija": "AutomobilNOVIID",
+        "datum": "2022-05-19",
+        "cena": 444,
+        "tekst": "123123",
         "tagovi": [
             "1"
         ],
-        "email": "2bgdn2000@gmail.comPROMENJEN"
+        "email": "312bgdn2000@gmail.com"
     },
     {
-        "id": 4,
-        "kategorija": "6aaaaaaaaaa",
-        "datum": "2022-05-20",
-        "cena": "2",
-        "tekst": "6",
+        "id": 2,
+        "kategorija": "proIzmenjen",
+        "datum": "2022-05-27",
+        "cena": 45,
+        "tekst": "2221",
         "tagovi": [
             "1",
             "2",
