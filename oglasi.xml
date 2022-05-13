@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE Oglasi SYSTEM "oglasiDTD.dtd">
 <Oglasi>
     <Oglas>
         <Kategorija>Automobil</Kategorija>
@@ -7,15 +9,15 @@
             <Godina>2022</Godina>
         </Datum>
         <Cena valuta="eur">20</Cena>
-        <Tekst></Tekst>
+        <Tekst>Stan u beogradu</Tekst>
         <Tagovi>
             <Tag>1992</Tag>
             <Tag>Benzin</Tag>
         </Tagovi>
-        <kontakt>
+        <Kontakt>
             <email tip="privatni">bogdan@gmail.com</email>
             <email tip="sluzbeni">bogdannrt1519@gs.viser.edu.rs</email>
-        </kontakt>
+        </Kontakt>
     </Oglas>
     <Oglas>
         <Kategorija>Stan</Kategorija>
@@ -30,8 +32,8 @@
             <Tag>100m2</Tag>
             <Tag>Vozdovac</Tag>
         </Tagovi>
-        <kontakt>
+        <Kontakt>
             <email tip="privatni">petar@gmail.com</email>
-        </kontakt>
+        </Kontakt>
     </Oglas>
 </Oglasi>
