@@ -1,0 +1,86 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Oglasi" type="OglasiType" />
+    <xs:complexType name="DatumType">
+        <xs:sequence>
+            <xs:element name="Dan">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minExclusive value="0"></xs:minExclusive>
+                        <xs:maxInclusive value="31"></xs:maxInclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Mesec">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minExclusive value="0"></xs:minExclusive>
+                        <xs:maxInclusive value="12"></xs:maxInclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:int" name="Godina" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="restrictionCena">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0"></xs:minExclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="CenaType">
+        <xs:simpleContent>
+            <xs:extension base="restrictionCena" xmlns:w3s="https://www.w3schools.com">
+                <xs:attribute name="valuta" use="optional" default="rsd">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="eur"></xs:enumeration>
+                            <xs:enumeration value="rsd"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="tekstType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10"></xs:minLength>
+            <xs:maxLength value="180"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="TagoviType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Tag" maxOccurs="unbounded" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="restrictionEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="emailType">
+        <xs:simpleContent>
+            <xs:extension base="restrictionEmail">
+                <xs:attribute type="xs:string" name="tip" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="kontaktType">
+        <xs:sequence>
+            <xs:element type="emailType" name="email" maxOccurs="unbounded" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OglasType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Kategorija" />
+            <xs:element type="DatumType" name="Datum" />
+            <xs:element type="CenaType" name="Cena" />
+            <xs:element type="tekstType" name="Tekst" />
+            <xs:element type="TagoviType" name="Tagovi" />
+            <xs:element type="kontaktType" name="kontakt" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OglasiType">
+        <xs:sequence>
+            <xs:element type="OglasType" name="Oglas" maxOccurs="unbounded" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
